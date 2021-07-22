@@ -1,4 +1,5 @@
 import 'package:cookieshop/bottom_bar.dart';
+import 'package:cookieshop/cookie_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -104,6 +105,18 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
                 ),
               ),
             ],
+          ),
+          Container(
+            height: MediaQuery.of(context).size.height - 50.0,
+            width: double.infinity,
+            child: TabBarView(
+              controller: _tabController,
+              children: [
+                CookiePage(),
+                CookiePage(),
+                CookiePage()
+              ],
+            ),
           )
         ],
       ),
